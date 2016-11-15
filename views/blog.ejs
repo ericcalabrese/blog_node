@@ -1,0 +1,116 @@
+<!--
+<% for (var i=0; i<post.length; i++) { %>
+<div>
+	<h2><%= post[i].title %></h2>
+</div>
+<div> 
+	<p> <%= post[i].body %> </p>
+</div>
+<div>
+	<p> <%= post[i].date %> </p>
+</div>
+<% } %>
+
+<a href="/create">Write</a> 
+-->
+
+
+<head>
+
+    <title>Eric's Blog</title>
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Eric's Blog</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                    <a href="/create">Write</a> 
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+        
+            <hr>
+            <hr>
+
+            <div class="col-md-8">
+            <% for (var i=0; i<post.length; i++) { %>      
+            <h2> 
+            <a href="#"> <%= post[i].title %> </a>
+            </h2>
+             <p><span class="glyphicon glyphicon-time"></span> Posted on <%= post[i].date %> </p>
+            <p> <%= post[i].body %> </p>
+            <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+            <% } %>
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="well">
+                    <h4>Blog Search</h4>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="well">
+                    <h4>Blog Categories</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Music</a>
+                                </li>
+                                <li><a href="#">Sports</a>
+                                </li>
+                                <li><a href="#">New York Knicks</a>
+                                </li>
+                                <li><a href="#">Guitar</a>
+                                </li>
+                                <li><a href="#">Festivals</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="well">
+                    <h4>A Little About My Self</h4>
+                    <p>I am taking a Part Time Web Development course at New York Code & Design Academy. This is my first project with node and I am currently killing the game. </p>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Eric Calabrese 2016</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>

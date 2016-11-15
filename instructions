@@ -1,0 +1,35 @@
+	How to load the blog posts onto separate page
+
+# of pages - app.js with express info 
+html pages, js with functions jquery, ejs page
+
+
+(js page with express info)
+var variable = [info, info, info];
+
+
+app.get(/variable, function(req, res) {
+	var data = {};
+	data.something = variable (up top)
+	res.render('variable', {data: data})
+}
+
+(html pg)
+create div on html with class name same as variable <div class = variable> </div>
+
+(js page) 
+$(function(){
+	$.get(/variable, function(response){
+		console.log(response)
+		$"classname".html(response)
+	})
+
+}); 
+
+make ejs page
+
+<ul>
+	<% for (var i in something) { %>
+	<li><%= something[i] %> </li>
+	<% } %>
+</ul>
